@@ -53,8 +53,9 @@ class InteractiveRecord
     DB[:conn].execute(sql)
   end
 
-  def self.find_by()
-    
+  def self.find_by(stuff)
+    sql = "SELECT * FROM #{self.table_name} WHERE #{stuff} = '#{stuff}'"
+    DB[:conn].execute(sql)
   end
 
 end
