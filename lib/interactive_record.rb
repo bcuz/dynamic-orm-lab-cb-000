@@ -57,7 +57,7 @@ class InteractiveRecord
   def self.find_by(stuff)
     # binding.pry
     # getting specif keyword from paramter
-    sql = "SELECT * FROM #{self.table_name} WHERE #{stuff.keys[0].to_s} = '#{stuff[x.keys[0]]}'"
+    sql = "SELECT * FROM #{self.table_name} WHERE #{stuff.keys[0].to_s} = '#{stuff[stuff.keys[0]]}'"
     # sql = "SELECT * FROM #{self.table_name} WHERE name = '#{name}'"
     DB[:conn].execute(sql)
   end
