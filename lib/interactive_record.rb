@@ -55,7 +55,7 @@ class InteractiveRecord
 
   # could be multipl things
   def self.find_by(name)
-    binding.pry
+    # binding.pry
     # getting specif keyword from paramter
     sql = "SELECT * FROM #{self.table_name} WHERE #{stuff.keys[0].to_s} = '#{stuff[x.keys[0]]}'"
     # sql = "SELECT * FROM #{self.table_name} WHERE name = '#{name}'"
