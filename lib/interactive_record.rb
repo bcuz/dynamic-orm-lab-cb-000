@@ -53,6 +53,7 @@ class InteractiveRecord
     DB[:conn].execute(sql)
   end
 
+  # could be multipl things
   def self.find_by(stuff)
     sql = "SELECT * FROM #{self.table_name} WHERE #{stuff.keys[0].to_s} = '#{stuff}'"
     DB[:conn].execute(sql)
